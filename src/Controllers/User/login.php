@@ -4,7 +4,7 @@ namespace Luciano\Gestao\Controllers\User;
 
 use Luciano\Gestao\Helpers\Template\Loader;
 
-class Login
+class login
 {
     private Loader $template;
 

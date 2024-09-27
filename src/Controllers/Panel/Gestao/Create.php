@@ -1,8 +1,8 @@
 <?php
 
-namespace Luciano\Gestao\Controllers\Panel\Scheduler;
+namespace Luciano\Gestao\Controllers\Panel\Gestao;
 
-use Gustavo\Gestao\Helpers\Template\Loader;
+use Luciano\Gestao\Helpers\Template\Loader;
 
 Class Create{
     public function __construct(){
@@ -11,7 +11,7 @@ Class Create{
 
     public function execute()
     {
-        echo 'oiii?';
+        echo 'teste?';
     }
 
 }

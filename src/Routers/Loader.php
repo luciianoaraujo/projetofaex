@@ -4,7 +4,7 @@ namespace Luciano\Gestao\Routers;
 
 use CoffeeCode\Router\Router;
 use Luciano\Gestao\Routers\User\UserRouters;
-use Luciano\Gestao\Routers\Panel\Scheduler\SchedulerRouters;
+use Luciano\Gestao\Routers\Panel\Gestao\GestaoRouters;
 
 class Loader
 {
@@ -12,18 +12,18 @@ class Loader
 
     private UserRouters $userRouter;
 
-    private SchedulerRouters $schedulerRouter;
+    private GestaoRouters $gestaoRouter;
 
     public function __construct() {
         $this->router = new Router("http://localhost");
         $this->userRouter = new UserRouters($this->router);
-        $this->schedulerRouter = new SchedulerRouters($this->router);
+        $this->gestaoRouter = new GestaoRouters($this->router);
     }
 
     public function execute() 
     {
-        $this->userRouter->execute();  
-        $this->schedulerRouter->execute();
+        $this->userRouter->execute();
+        $this->gestaoRouter->execute();
         $this->router->dispatch();
         
         if ($this->router->error()) {
